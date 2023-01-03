@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unsplash API in Javascript</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="test-bg.css">
+  </head>
+  <body class=".bg1">
+   
+  </body>
+  <script>
+    const requestUrl =
+      'https://api.unsplash.com/photos/random?count=30&client_id=CxOnpkRxM9MCPsFTCjGPPesQlicXNHYnEZVLWBCl5sA';
+    const getImagesButton = document.querySelector('.getImagesButton');
+    const imageToDisplay = document.querySelector('.imageToDisplay');
+
+    
+
+    window.onload = function() {
+        function bgLoader(){
+      let randomNumber = Math.floor(Math.random() * 20);
+      return fetch(requestUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          let allImages = data.urls[randomNumber];
+         allImages.full;
+          let randomImage = allImages.full ;
+      document.body.style.background = "url('"+randomImage+"')  no-repeat center center/cover"; 
+      document.body.classlist.add('bg1');
+          
+        });}
+
+        bgLoader();
+        setInterval(bgLoader,60000);
+        
+    }
+
+    
+
+  </script>
+</html>

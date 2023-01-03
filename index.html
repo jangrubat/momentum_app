@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+                <!-- FONT -->
+            <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+            <!-- ICONS -->
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+
+    <title>Momentum App</title>
+</head>
+<body>
+    <div class="overlay active">
+        <input class="overLayInput" type="text" placeholder="What is your name?">
+    </div>
+<!-- <div class="mainContainer"> -->
+    <div class="topBanner hidden">
+        <div class="searchBar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="searchInput" type="text" width="100%" />
+            <i onclick="toggleYoutube()" id="showYT" class="fa-brands fa-google"></i>
+            <i onclick="toggleGoogle()" id="showGoog" class="fa-brands fa-youtube" style="display: none;"></i>
+        </div>
+
+        <div class="weather">
+            <div id="iconWea" class="icon-weather">
+                <img id="wicon" src="" alt="Weather icon">
+            </div>
+            <div class="temp-loc">
+                <p id="weatTemp"  class="weaTemp">27C</p>
+                <small id="wLoc" class="weaLoc">Manila</small>
+            </div>
+
+        </div>
+    </div>
+<!-- <div class="middleContainer"> -->
+    <div id="dayOfWeek" class="dateToday  hidden">Thusday, 12/29/2022 </div>
+    <div class="timeNow hidden">
+        <div class="time">NA PM</div>
+        <div class="time24" style="display: none;"> TE</div>
+
+        <!-- DOT MENU Time -->
+        <!-- <div class="timeFormat">
+            <i onclick="showCMenu()"  class="fa-sharp fa-solid fa-ellipsis fa-timeFormat"></i> 
+        </div> -->
+        <!-- Option Toggle 24hrs and 12hrs -->
+        <!-- <div class="shadow"></div> -->
+        <div class="cMenu-container" id="cMenu">
+
+            <div id="toggle24" class="hours-24"  >
+                <a  onclick="showMenu12()">24-hours</a>
+                <i class="fa-sharp-2 fa-solid fa-toggle-off"></i>
+            </div>
+
+            <div id="toggle12" class="hours-12" style="display: none;">
+                <a onclick="showMenu24()"  >12-hours</a>
+                <i class="fa-sharp-2 fa-solid fa-toggle-on"></i>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    
+    <div class="greetName hidden">
+        <div id="greeting" class="greet">Good Morning,</div>
+        <div id="nameslist" class="nameUser">Jan!</div>
+        <div id="inputRename" class="reName" style="display: none;">
+            <input id="renameInput" type="text">
+        </div>
+        
+        <div class="editNameMenu" >
+            <i onclick="editNaMenu1()" class="fa-sharp fa-solid fa-ellipsis fa-editNMenu"></i> 
+        </div>
+        <div onclick="editShowInput1()" id="editNC" style="display: none;" >
+        <a >Edit Name</a>
+        </div>
+        
+    </div>
+    <div class="focus-container hidden">
+        <div class="focus">What is your main focus today?</div>
+        <input type="text" class="todo-input">
+    </div>
+    <div class="todo-container hidden">
+        <ul     class="todo-list"></ul>
+    </div>
+
+
+<!-- </div> -->
+
+    <div class="bottomBanner hidden">
+        <div class="unSpash">
+            <p id="phAuthor">Photo by..</p>
+            <small id="phLoc">Location..</small>
+
+        </div>
+        <div class="quotesCard">
+            <p id="quote">"Loading quotes..."</p>
+            <small id="author">...</small>
+        </div>
+        <div id="toDoCard" style="display:none;" >
+            <h1 onclick="hideDivToDo()">Notes</h1>
+            <div class="containerCard">
+                <div>
+                <input id="inputField" type="text">
+                <!-- <button id="addToDo">+</button> -->
+                
+                    <i id="addToDo" class="fa-solid fa-square-plus"></i>
+                </div>
+            
+                <div class="to-dos" id="toDoContainer">
+                </div>
+            </div>
+        </div> 
+        <div class="notePad" onclick="showDivToDo()">Note Pad</div>
+
+    </div>
+<!-- </div> -->
+
+<script src="overlay.js"></script>
+<script src="todoMain.js"></script>
+<script src="menuHideShow.js"></script>
+<script src="quotesRandom.js"></script>
+<script src="searchFunciton.js"></script>
+<script src="randomBgUnsplash.js"></script>
+<script src="time.js"></script>
+<script src="weatherScript.js"></script>
+<script src="notePad.js"></script>
+<script src="noteListDelete.js"></script>
+<!-- <script src="weatherLoader.js"></script> -->
+
+
+</body>
+</html>

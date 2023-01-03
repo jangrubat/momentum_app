@@ -1,0 +1,605 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: whitesmoke; */
+}
+
+body{
+
+    
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+body{
+    /* display: none; */
+    height: 100vh;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    Background: black;
+}
+
+
+
+
+
+
+.topBanner, .bottomBanner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.bottomBanner{
+    margin-top: auto;
+}
+
+.dateToday{
+    margin-top: 12%;
+    letter-spacing: 5pt;
+   
+}
+
+.timeNow{
+   
+    display: flex;
+    margin: .5% auto;
+    position: relative;
+    left: 40px;
+    align-items: center;
+}
+
+.dateToday, 
+.time, 
+.greetName, 
+.focus-container,
+.todo-container, 
+.searchBar, 
+.weather, 
+.unSpash, 
+.quotesCard, 
+.notePad, .time24{
+color: #ffffff;
+filter: drop-shadow(0 0 0.9rem rgb(0, 0, 0));
+
+}
+
+.unSpash{
+    margin: 1.8rem;
+
+}
+
+.searchBar{
+    display: flex;
+    margin: 0 1.8rem 0 1.8rem  ;
+    /* border: 1px solid rgb(255, 255, 255); */
+    align-items: center;
+}
+
+.notePad{
+    margin: 1.8rem;
+    font-size: 1.2rem;
+    /* border: 1px solid rgb(255, 255, 255); */
+
+}
+
+.weather{
+    display: flex;
+    margin: 0.5rem 1.8rem 0 1.8rem  ;
+    /* border: 1px solid rgb(255, 255, 255); */
+    align-items: center;
+    justify-content: center;
+}
+/* .weaTemp,.weaLoc{ */
+    /* margin: 0.5rem; */
+    /* border: 1px solid rgb(255, 255, 255); */
+/* } */
+
+.weaTemp{
+    font-size: 1.8rem;
+}
+
+.icon-weather{
+    margin: 0 0 0 1.8rem  ;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+
+
+
+
+.dateToday, 
+.time, 
+.greetName, 
+.focus-container,
+.todo-container,.time24{
+
+    display: flex;
+    /* flex-direction: column; */
+    /* align-content: center; */
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    /* border: 1px solid black; */
+}
+
+.time, .time24{
+    font-size: 10rem;
+    max-width: 700px;
+}
+
+.dateToday{
+    font-size: 2rem;
+}
+.greet, .nameUser, .reName{
+    font-size: 2.8rem;
+}
+
+.greetName{
+    display: flex;
+    /* margin: 0 0 0 5%; */
+}
+
+.searchBar #searchInput{
+    /* max-width: 70px; */
+    margin: 1rem;
+    background-color: transparent;
+    /* background: none; */
+    color: #ffffff;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	border-bottom: 1.5px solid #ffffff;
+}
+
+
+
+.focus{
+    font-size: 1.5rem;
+}
+
+.focus-container{
+    margin-top: 2rem;
+}
+
+.focus-container input{
+    width: 350px;
+	/* margin-top: 5%; */
+	background-color: transparent;
+    color: #ffffff;
+	outline: none;
+	border: none;
+	font-size: 1.5rem;
+	border-bottom: 1.5px solid #ffffff;
+}
+
+.reName input{
+    max-width: 70px;
+    background-color: transparent;
+    /* background: none; */
+    color: #ffffff;
+	outline: none;
+	border: none;
+	font-size: 2.8rem;
+	border-bottom: 1.5px solid #ffffff;
+}
+
+.fa-brands{
+    
+    margin: 3px;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    /* background-color: rgb(0, 136, 255); */
+    color: #ffffff;
+    
+}
+
+
+
+
+
+
+.focus-container{
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.todo-list{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .timeFormat{
+    position: relative;
+    top: -10px;
+    left: 25px;
+} */
+/* 
+.editNC{
+    max-height: 5px;
+} */
+
+
+/* Hover-Animation */
+
+.fa-sharp{
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.163);
+    color: #ffffff;
+    text-align: center;
+    margin: .5%;
+    padding: .5rem;
+}
+
+.hours-24, .hours-12, 
+.fa-editNMenu,.trash-btn,
+ .complete-btn, 
+ #searchInput, 
+ .fa-google, 
+ .fa-youtube{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cMenu-container{
+    /* border: 1px solid black; */
+    max-height: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.cMenu-container:hover .hours-24 {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.cMenu-container:hover .hours-12 {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.searchBar:hover #searchInput{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.searchBar:hover .fa-google{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.searchBar:hover .fa-youtube{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+
+.editNC:hover .fa-editNMenu{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.editNameMenu:hover .fa-editNMenu{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+.todo-list:hover .trash-btn{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+
+}
+.todo-list:hover .complete-btn{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+/* TODO */
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    /* background: white; */
+    color:  #ffffff;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.trash-btn, .complete-btn{
+    background: none;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}quotesCard
+
+
+
+.todo-item{
+ padding: 0 0.5rem;   
+ 
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+
+
+}
+
+.fa-sharp-2{
+    color: #ffffff;
+    padding: 5px;
+    /* background-color: #000000; */
+    border-radius: 50px;
+
+}
+
+
+.quotesCard{
+    width: 80vw;
+    align-self: center;
+    text-align: center;
+    /* border: 1px solid black; */
+    font-size: 1rem;
+    margin-bottom: 1%;
+    transition: all 3s ease-in-out;
+
+}
+
+
+
+
+
+
+/* a link CSS */
+
+
+a {
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px ;
+    background-color: #7d7d7d;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+
+    /* pointer-events: none; */
+  }
+
+  a:hover {
+    /* border-bottom: 1px solid; */
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  /* a:active {
+    background: #265301;
+    color: #cdfeaa;
+  } */
+
+
+
+  
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+
+/* NOTEPAD DESIGN */
+
+.containerCard #inputField {
+    margin:  0.5rem 0.5rem 0.5rem 1.5rem ;
+    width: 220px;
+    height: 30px;
+    border-width: 0;
+    /* border: 1px solid black; */
+    color: rgb(60, 60, 60);
+    outline: none;
+    font-size: 15px;
+    /* vertical-align: middle; */
+    
+}
+
+#toDoContainer{
+    margin: 1rem;
+}
+
+#addToDo {
+    /* height: 30px; */
+    /* width: 30px; */
+    /* border-radius: 5px; */
+    /* background-color: transparent; */
+    /* border: 1px solid black; */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    /* font-weight: 600; */
+    /* margin: .5rem; */
+}
+
+.paragraph-styling {
+    color: #ffffff;
+    margin:  0.5rem 0.5rem 0.5rem 0.5rem ;
+    cursor: pointer;
+    font-size: 20px;
+    border-bottom: 0.5px solid #ffffff;
+}
+
+.to-dos {
+    margin-top: 20px;
+}
+
+#toDoCard h1{
+    margin:0.5rem;
+ font-size: 1.5rem;
+ text-align: center;
+}
+.container {
+    width: 360px;
+   
+}
+
+#toDoCard{
+    /* border: 1px solid black; */
+font-family: 'Ubuntu', sans-serif;
+color: #ffffff;
+display: block;
+border-radius: 25px;
+margin: 5% 2% 2% 0%;
+position: absolute;
+right: 0px;
+bottom: 70px;
+height: 400px;
+width: 300px;
+backdrop-filter: blur(5px);
+background-color: rgba(44, 44, 44, 0.622);
+z-index: 3;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden{
+    visibility: hidden;
+    /* display: none; */
+}
+
+.active{
+    visibility: visible;
+}
+
+/* .mainContainer{
+    display: none;
+} */
+
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+.time, .time24{
+    font-size: 4rem;   
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */
+}
+
+.unSpash, .notePad{
+    display: none;
+}
+
+.quotesCard{
+    width: 100vw;
+    align-self: center;
+    text-align: center;
+    /* border: 1px solid black; */
+
+}
+
+
+
+}
+
+@media screen and (max-width: 400px){
+    
+    .time, .time24{
+        font-size: 3rem;
+        /* display: none; */
+    }
+    .greet, .nameUser, .reName{
+        font-size: 1rem;
+    }
+
+    
+    }
+
+    body{
+        font-family: 'Ubuntu', sans-serif;
+    }
